@@ -15,7 +15,15 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        //create person object
+        Person person1 = new Person()
+        {
+            personId = 1,
+            FirstName = "John",
+            LastName = "Doe"
+        };
+        
+        return View(person1);
     }
 
     public IActionResult Privacy()
